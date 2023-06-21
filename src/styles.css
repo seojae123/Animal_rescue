@@ -1,0 +1,598 @@
+@import "https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css";
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  all: unset;
+  box-sizing: border-box;
+  appearance: none;
+}
+
+body {
+  /* background-color: black; */
+  background-color: grey;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+button {
+  background-color: white;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+form {
+  width: 100%;
+}
+
+.nweet-input::placeholder {
+  color: white;
+  opacity: 0.9;
+}
+
+.container {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.formBtn {
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  background-color: #04aaff;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  cursor: pointer;
+  background-color: tomato;
+}
+
+/* Profile Page */
+
+.profileForm {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  padding-bottom: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logOut {
+  margin-top: 50px;
+}
+
+/* Nwitter Factory */
+
+.factoryForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.factoryInput__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.factoryInput__arrow {
+  position: absolute;
+  right: 0;
+  /* background-color: #04aaff; */
+  background-color: #2db400;
+  height: 40px;
+  width: 40px;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+.factoryInput__input {
+  flex-grow: 1;
+  height: auto; /* 기본 높이를 자동으로 설정 */
+  min-height: 40px; /* 최소 높이를 40px로 설정 */
+  max-height: 200px; /* 최대 높이를 320px로 설정 (20줄 기준) */
+  padding: 0px 20px;
+  color: black;
+  /* border: 1px solid #04aaff; */
+  border: 3px solid #2db400;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  resize: none;
+  transition: height 0.3s ease;
+  overflow-y: auto;
+  white-space: pre-line;
+  background-color: whitesmoke;
+}
+
+.factoryInput__input:focus {
+  height: 160px;
+}
+
+.factoryInput__label {
+  /* color: #04aaff; */
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.factoryInput__label span {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.factoryForm__attachment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.factoryForm__attachment img {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+}
+
+.factoryForm__clear {
+  color: whitesmoke;
+  cursor: pointer;
+  text-align: center;
+}
+
+.factoryForm__clear span {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+/* Nweet */
+
+.nweetEdit .formBtn {
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.nweet {
+  margin-bottom: 10px;
+  background-color: white;
+  width: 100%;
+  max-width: 350px;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nweet h4 {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nweet img {
+  right: -10px;
+  top: 20px;
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.nweet__actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.handleCompleteToggle {
+  margin-left: 10px;
+}
+
+.nweet__actions span {
+  cursor: pointer;
+}
+
+.nweet__actions span:first-child {
+  margin-right: 10px;
+}
+
+/* Auth */
+
+.authContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.authBtns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+}
+
+.authBtn {
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 0px;
+  font-size: 12px;
+  text-align: center;
+  width: 150px;
+  background: white;
+  cursor: pointer;
+}
+
+/* AuthForm */
+
+.authInput {
+  max-width: 320px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.authSubmit {
+  text-align: center;
+  background: #2db400;
+  color: white;
+  margin-top: 10;
+  cursor: pointer;
+}
+
+.authError {
+  color: tomato;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.authSwitch {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  display: block;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.detailPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.detailPage__content {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+
+.detailPage__text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.detailPage__image {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* 검색창 CSS*/
+.search_Container {
+  margin-top: -50px;
+}
+
+.search_Input {
+  width: 100%;
+  height: 70%;
+  padding: 8px;
+  /* border: 2px solid white; */
+  border: 5px solid #2db400;
+  background-color: white;
+  color: black;
+}
+
+/* 페이지 넘김 버튼 CSS */
+.pagination {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.pagination-button {
+  cursor: pointer;
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #ddd;
+}
+
+.pagination-button:disabled {
+  cursor: text;
+  background-color: #ccc;
+  color: #999;
+}
+
+/* Home화면 태그선택 CSS */
+.animalType_Container {
+  margin-bottom: -25px;
+}
+
+.animalType_Select {
+  padding: 5px;
+  font-size: 12px;
+  border: 3px inset #2db400;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  color: #333;
+  cursor: pointer;
+  float: right;
+  width: 25%;
+}
+
+/* 시간스탬프 CSS */
+.nweetTimestamp {
+  font-size: 1px;
+  margin-bottom: 10%;
+}
+
+/* 모달창 CSS */
+/* Modal Container */
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Content */
+.modalContent {
+  max-width: 90%;
+  max-height: 90%;
+  background-color: #fff;
+  color: black;
+  border-radius: 8px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modalContent h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modalContent p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.modalContent div {
+  margin-bottom: 30px;
+}
+
+.modalContent h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modalContent p:last-child {
+  margin-bottom: 0;
+}
+
+.modalContent button {
+  background-color: #71ff5e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modalContent button:hover {
+  background-color: #1dff00;
+}
+
+/* 글작성 페이지 CSS*/
+.writeBtn {
+  /* background-color: #4caf50;
+  float: left;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 10px; */
+  padding: 5px;
+  font-size: 12px;
+  border: 3px outset #2db400;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  color: #333;
+  cursor: pointer;
+  float: left;
+  width: 25%;
+}
+
+.WriteArea {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.UploadBtn {
+  margin-top: 3%;
+  /* margin-bottom: 5%; */
+  float: right;
+  display: block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.PhotoInput {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* 글작성 페이지 내 유기동물-야생동물 선택 라디오 버튼 CSS*/
+.radioGroup {
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.radioGroup label {
+  margin-right: 10px;
+}
+
+.radioGroup input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radioGroup input[type="radio"]:checked + span {
+  font-weight: bold;
+}
+
+.radioGroup input[type="radio"]:not(:checked) + span {
+  opacity: 0.5;
+}
+
+/* 댓글 CSS*/
+/* .comment {
+  border: 1px solid black;
+}
+
+.commentInput {
+  margin-top: 5%;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 5%;
+}
+
+.commentBtn {
+  cursor: pointer;
+} */
+
+.comment {
+  margin-top: 20px;
+}
+
+.comment p {
+  font-size: 15px;
+}
+
+.commentInput {
+  padding: 8px;
+  width: 88%;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 5%;
+}
+
+.commentBtn {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.commentList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid white;
+  justify-content: space-between;
+}
+
+.deleteBtn {
+  margin-left: 8px;
+  padding: 4px 8px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
